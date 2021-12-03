@@ -1,0 +1,21 @@
+{
+  "name": "social",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node -r dotenv/config src/app.js",
+    "start:dev": "nodemon -r dotenv/config src/app.js",
+    "start:debug": "nodemon -r dotenv/config --inspect src/app.js",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix --color"
+  },
+  "author": "sheykin sergey",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "dotenv": "^10.0.0"
+  }
+}
