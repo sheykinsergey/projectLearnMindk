@@ -1,25 +1,31 @@
 {
-  "name": "social",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "scripts": {
-    "start": "node -r dotenv/config src/app.js",
-    "start:dev": "nodemon -r dotenv/config src/app.js",
-    "start:debug": "nodemon -r dotenv/config --inspect src/app.js",
-    "lint": "eslint ./src",
-    "lint:fix": "eslint ./src --fix --color"
-  },
-  "author": "sheykin sergey",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1"
-  },
-  "devDependencies": {
-    "dotenv": "^10.0.0",
-    "eslint": "^8.3.0",
-    "eslint-config-airbnb": "^19.0.2",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.25.3"
-  }
+    "name": "social",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "start": "node -r dotenv/config src/app.js",
+        "start:dev": "nodemon -r dotenv/config src/app.js",
+        "start:debug": "nodemon -r dotenv/config --inspect src/app.js",
+        "lint": "eslint ./src",
+        "lint:fix": "eslint ./src --fix",
+        "prepare": "husky install"
+    },
+    "author": "sheykin sergey",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1"
+    },
+    "devDependencies": {
+        "dotenv": "^10.0.0",
+        "eslint": "^8.3.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-plugin-import": "^2.25.3",
+        "husky": "^7.0.4",
+        "lint-staged": "^12.1.2",
+        "prettier": "2.5.0"
+    },
+    "lint-staged": {
+        "*.js": "eslint --fix"
+    }
 }
